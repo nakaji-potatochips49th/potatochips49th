@@ -1,403 +1,190 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 potatochips 新歓予約フォーム一覧</title>
-  <style>
-    /* CSSファイル（stylesheet.css）を使わない代わりに、ここに記述します */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
-      /* 背景画像を「木目調（top.png）」に設定 */
-      background-image: url('top.png');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      color: #333;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    /* メインタイトル */
-    h1.main-title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* 文字を少し見やすく */
-    }
-
-    /* 注意書き */
-    .lead-text {
-      font-size: 14px;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      background-color: rgba(255, 255, 255, 0.6); /* 背景を少し白く */
-      padding: 15px;
-      border-radius: 8px;
-      display: inline-block;
-    }
-
-    /* SNSセクション */
-    .sns-wrapper {
-      margin-bottom: 40px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>potatochips 2026 新歓予約</title>
+  </head>
+  <body>
     
-    .sns-icon-link {
-      text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
-      transition: opacity 0.3s;
-    }
-    
-    .sns-icon-link:hover {
-      opacity: 0.7;
-    }
-    
-    .sns-icon {
-      width: 40px;
-      height: 40px;
-      vertical-align: middle;
-    }
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #ffffff; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); text-align: center;">
+      PotatoChips 2026
+    </h2>
 
-    /* カード全体のコンテナ */
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px; /* カード間の隙間 */
-    }
-
-    /* カード単体のスタイル */
-    .card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden; /* 画像が角からはみ出ないように */
-      width: 320px; /* カードの横幅 */
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px); /* 少し浮かす */
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-
-    /* カード上部の画像 */
-    .card-image-wrapper {
-      height: 200px;
-      overflow: hidden;
-    }
-    
-    .card-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* 画像を枠いっぱいに綺麗に収める */
-    }
-
-    /* カード下部の説明文エリア */
-    .card-content {
-      padding: 20px;
-      text-align: left;
-      flex-grow: 1; /* 残りの高さを埋める */
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* カード内のタイトル */
-    .card-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 0 0 10px 0;
-      color: #333;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    
-    /* カード内の日付・時間 */
-    .card-date {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    /* カード内の詳細文 */
-    .card-description {
-      font-size: 13px;
-      line-height: 1.6;
-      color: #666;
-      margin-bottom: 20px;
-      flex-grow: 1; /* テキストが短くてもボタンが下に来るように */
-    }
-
-    /* 申し込みボタン */
-    .btn-apply {
-      display: block;
-      background-color: #e4405f; /* インスタっぽいピンク */
-      color: white;
-      text-align: center;
-      padding: 10px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-      transition: background-color 0.3s;
-      margin-top: auto; /* 一番下に配置 */
-    }
-    
-    .btn-apply:hover {
-      background-color: #d62e4c;
-    }
-
-    /* フッター */
-    footer {
-      background-color: rgba(0,0,0,0.7);
-      color: #fff;
-      padding: 20px 0;
-      margin-top: 50px;
-      text-align: center;
-      font-size: 12px;
-    }
-
-    /* スマホ（画面幅が狭い時）の調整 */
-    @media (max-width: 768px) {
-      .card-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .card {
-        width: 100%;
-        max-width: 350px;
-      }
-      h1.main-title {
-        font-size: 24px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1 class="main-title">新歓予約フォーム一覧</h1>
-    
-    <div class="lead-text">
-      参加したい企画に申し込みをしてね！<br>
-      まだ公式ラインを追加していない人は申し込み前に追加してください！<br>
-      応募締め切りは各企画の前日までです。<br>
+    <h2 style="font-size: 2rem; font-weight: bold; color: #2e2e2e; border-bottom: 4px solid #2e2e2e; padding-bottom: 5px; text-align: center;">
+      新歓予約フォーム一覧
+    </h2>
+    <div style="font-size: 1rem; margin: 0 30px; text-align: center; background: rgba(255,255,255,0.5); padding: 15px; border-radius: 10px;">
+      参加したい企画に申し込みをしてね！<br />
+      まだ公式ラインを追加していない人は申し込み前に追加してください！<br />
+      応募締め切りは各企画の前日までです。<br />
       飛び込みで参加したい人は公式ラインまたは代持ちの誰かに聞いてみてください。
     </div>
-    
-    <div class="sns-wrapper">
-      <a href="https://x.com/あなたのID" class="sns-icon-link" target="_blank">
-        <img src="x.png" alt="X" class="sns-icon">
+
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+      <a href="https://x.com/potatochips48th" target="_blank">
+        <img src="x.png" alt="X" style="width: 40px; margin: 0 10px; border-radius: 20%; object-fit: cover;">
       </a>
-      <a href="https://www.instagram.com/あなたのID" class="sns-icon-link" target="_blank">
-        <img src="instagram.png" alt="Instagram" class="sns-icon">
+      <a href="https://www.instagram.com/potatochips_48th" target="_blank">
+        <img src="instagram.png" alt="Instagram" style="width: 40px; margin: 0 10px; border-radius: 20%; object-fit: cover;">
       </a>
-      <a href="https://line.me/R/ti/p/あなたのURL" class="sns-icon-link" target="_blank">
-        <img src="line.png" alt="LINE" class="sns-icon">
+      <a href="https://line.me/R/ti/p/@696mmrme" target="_blank">
+        <img src="line.png" alt="LINE" style="width: 40px; margin: 0 10px; border-radius: 20%; object-fit: cover;">
       </a>
     </div>
 
-    <div id="events" class="card-container">
-      
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="bowling.png" alt="ボウリング" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/8 ボウリング</h3>
-          <p class="card-date">日時：4/8(水) 18:00～20:00</p>
-          <p class="card-description">
-            新歓一発目はボウリング！初心者でも楽しめるチーム戦で豪華景品を狙おう！みんなで盛り上がりましょう。
-          </p>
-          <a href="ボウリングのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+    <ul class="card-wrapper">
+      <li class="card">
+        <img src="bowling.png" alt="ボウリング" />
+        <h3><a href="#">4/8 ボウリング</a></h3>
+        <p>新歓一発目はボウリング！初心者でも楽しめるチーム戦で豪華景品を狙おう！🎳</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="kamakura.png" alt="鎌倉観光" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/11 鎌倉観光</h3>
-          <p class="card-date">日時：4/11(土) 10:00～16:00</p>
-          <p class="card-description">
-            小町通りで食べ歩き！歴史ある街並みを散策して、新入生同士仲良くなろう。大仏も見に行きます！
-          </p>
-          <a href="鎌倉のフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="kamakura.png" alt="鎌倉観光" />
+        <h3><a href="#">4/11 鎌倉観光</a></h3>
+        <p>小町通りで食べ歩き！歴史ある街並みを散策して、新入生同士仲良くなろう。🌸</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="asakusa.png" alt="浅草観光" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/12 浅草観光</h3>
-          <p class="card-date">日時：4/12(日) 10:00～16:00</p>
-          <p class="card-description">
-            雷門に集合！下町の風情を楽しみながら、おみくじや食べ歩きを満喫！人力車に乗るチャンスも？
-          </p>
-          <a href="浅草のフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="asakusa.png" alt="浅草観光" />
+        <h3><a href="#">4/12 浅草観光</a></h3>
+        <p>雷門に集合！下町の風情を楽しみながら、おみくじや食べ歩きを満喫！⛩</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="saren.png" alt="サレン" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/13 サレン(テニス)</h3>
-          <p class="card-date">日時：4/13(月) 16:30～18:30</p>
-          <p class="card-description">
-            「サレン」はテニスのこと！ラケットは貸し出すので手ぶらでOK。楽しく打ち合おう！
-          </p>
-          <a href="サレンのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="saren.png" alt="サレン" />
+        <h3><a href="#">4/13 サレン🎾</a></h3>
+        <p>「サレン」はテニスのこと！ラケットは貸し出すので手ぶらでOK。楽しく打ち合おう！</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="joshikai.png" alt="女子会" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/15 女子会</h3>
-          <p class="card-date">日時：4/15(水) 18:00～20:00</p>
-          <p class="card-description">
-            今回は「スイパラ」で開催！甘いものを食べながら先輩に大学生活の不安を相談しちゃおう。
-          </p>
-          <a href="女子会のフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="joshikai.png" alt="女子会" />
+        <h3><a href="#">4/15 女子会(スイパラ)</a></h3>
+        <p>女子限定企画！今回は「スイパラ」で開催。甘いものを食べて女子トークで盛り上がろう💝</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="minatomirai.png" alt="みなとみらい" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/16 みなとみらい</h3>
-          <p class="card-date">日時：4/16(木) 18:00～20:30</p>
-          <p class="card-description">
-            横浜の夜景をバックにお散歩。エモい写真を撮りながら楽しく交流しましょう！
-          </p>
-          <a href="みなとみらいのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="minatomirai.png" alt="みなとみらい" />
+        <h3><a href="#">4/16 みなとみらい</a></h3>
+        <p>横浜といえばみなとみらい🌃✨きれいな夜景を楽しめる映えるスポットを散策しよう！</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="joshikai.png" alt="女子会" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/17 女子会</h3>
-          <p class="card-date">日時：4/17(金) 18:00～20:00</p>
-          <p class="card-description">
-            スイパラ女子会第2弾！美味しいケーキを食べながら、女子トークで盛り上がりましょう。
-          </p>
-          <a href="女子会のフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="joshikai.png" alt="女子会" />
+        <h3><a href="#">4/17 女子会(スイパラ)</a></h3>
+        <p>女子会第2弾！美味しいケーキを食べながら先輩に大学生活の相談もできちゃうチャンス🍰</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="BBQ.png" alt="BBQ" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/19 BBQ</h3>
-          <p class="card-date">日時：4/19(日) 11:00～15:00</p>
-          <p class="card-description">
-            屋外でみんなでお肉を焼こう！サークルの雰囲気を知るには一番のビッグイベント！
-          </p>
-          <a href="BBQのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="BBQ.png" alt="BBQ" />
+        <h3><a href="#">4/19 BBQ🍖</a></h3>
+        <p>ポテト最大のイベント！班ごとにドライブして河原でBBQ！一番楽しい企画間違いなし！</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="saren.png" alt="サレン" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/21 サレン(テニス)</h3>
-          <p class="card-date">日時：4/21(火) 16:30～18:30</p>
-          <p class="card-description">
-            放課後テニス！運動してリフレッシュ。経験者も未経験者も大歓迎です！
-          </p>
-          <a href="サレンのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="saren.png" alt="サレン" />
+        <h3><a href="#">4/21 サレン🎾</a></h3>
+        <p>サークル練習会！運動してリフレッシュ。テニス未経験者も大歓迎です！</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="bowling.png" alt="ボウリング" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/22 ボウリング</h3>
-          <p class="card-date">日時：4/22(水) 18:00～20:00</p>
-          <p class="card-description">
-            ボウリング再び！前回行けなかった人もぜひ。白熱の勝負を楽しみましょう！
-          </p>
-          <a href="ボウリングのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="bowling.png" alt="ボウリング" />
+        <h3><a href="#">4/22 ボウリング</a></h3>
+        <p>ボウリング第2回！前回行けなかった人もぜひ。白熱の勝負を楽しみましょう🎳</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="joshikai.png" alt="女子会" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/23 女子会</h3>
-          <p class="card-date">日時：4/23(木) 18:00～20:00</p>
-          <p class="card-description">
-            スイパラでアフタヌーンティー気分。履修登録のコツなども聞けるチャンス！
-          </p>
-          <a href="女子会のフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="joshikai.png" alt="女子会" />
+        <h3><a href="#">4/23 女子会(スイパラ)</a></h3>
+        <p>女子限定スイパラ企画🍰 履修登録のコツやサークルの裏話も聞けちゃうかも！？</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="saren.png" alt="サレン" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/24 サレン(テニス)</h3>
-          <p class="card-date">日時：4/24(金) 16:30～18:30</p>
-          <p class="card-description">
-            新歓サレン最終日。テニスの楽しさを体感して、ポテチの一員になろう！
-          </p>
-          <a href="サレンのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="saren.png" alt="サレン" />
+        <h3><a href="#">4/24 サレン🎾</a></h3>
+        <p>新歓サレン最終日！テニスの楽しさを体感して、ポテチの一員になろう！</p>
+      </li>
 
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="piknic.png" alt="ピクニック" class="card-image">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">4/25 ピクニック</h3>
-          <p class="card-date">日時：4/25(土) 11:00～14:00</p>
-          <p class="card-description">
-            芝生の上でのんびり。お弁当を食べながら、最後の新歓イベントを楽しみましょう！
-          </p>
-          <a href="ピクニックのフォームURL" class="btn-apply" target="_blank">予約フォームを開く</a>
-        </div>
-      </div>
+      <li class="card">
+        <img src="piknic.png" alt="ピクニック" />
+        <h3><a href="#">4/25 ピクニック🧺</a></h3>
+        <p>芝生の上でのんびり。お弁当を食べながら最後の新歓イベントを楽しみましょう！</p>
+      </li>
+    </ul>
 
-    </div>
-  </div>
+    <style>
+      /* --- カードのデザイン設定 --- */
+      .card {
+        --card-gradient: rgba(0, 0, 0, 0.8);
+        --card-blend-mode: overlay;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+        padding-bottom: 1rem;
+        background-image: linear-gradient(
+          var(--card-gradient),
+          white max(9.5rem, 29vh)
+        );
+        overflow: hidden;
+        transition: transform 0.2s;
+      }
+      .card img {
+        border-radius: 0.5rem 0.5rem 0 0;
+        width: 100%;
+        object-fit: cover;
+        max-height: max(10rem, 30vh);
+        aspect-ratio: 4/3;
+        mix-blend-mode: var(--card-blend-mode);
+      }
+      .card img ~ * {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .card h3 {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+      }
+      .card a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .card p {
+        font-size: 0.9rem;
+        color: #666;
+      }
+      .card:hover,
+      .card:focus-within {
+        --card-gradient: #24a9d5 max(8.5rem, 30vh);
+        transform: translateY(-5px);
+      }
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 potatochips. Learn to Play, Learn to be Creative.</p>
-    </div>
-  </footer>
-</body>
+      /* --- 全体のレイアウト設定 --- */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ffffff;
+        background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png");
+        min-height: 100vh;
+        margin: 0;
+        padding: 2rem 1rem;
+        line-height: 1.5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #444;
+      }
+
+      .card-wrapper {
+        list-style: none;
+        padding: 0;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+        grid-gap: 1.5rem;
+        max-width: 1200px;
+      }
+    </style>
+  </body>
 </html>
