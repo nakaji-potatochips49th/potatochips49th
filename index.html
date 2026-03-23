@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>4月の活動スケジュール</title>
     <style>
         body {
+            /* 背景に波の画像を設定 */
             background-image: url("image_3071c0.jpg");
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             margin: 0;
             padding: 40px 10px;
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
         h1 {
@@ -23,14 +25,16 @@
             margin-bottom: 40px;
         }
 
+        /* 1行に3列並べる設定 */
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 1行に3列 */
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
+        /* カード（枠）のデザイン */
         .card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -76,7 +80,7 @@
             color: #666;
             line-height: 1.5;
             margin-bottom: 15px;
-            min-height: 45px;
+            min-height: 45px; /* 高さを揃える */
         }
 
         .btn-entry {
@@ -90,11 +94,11 @@
             font-weight: bold;
         }
 
-        /* スマホ対応 */
-        @media (max-width: 800px) {
+        /* スマホ・タブレット対応 */
+        @media (max-width: 850px) {
             .container { grid-template-columns: repeat(2, 1fr); }
         }
-        @media (max-width: 500px) {
+        @media (max-width: 550px) {
             .container { grid-template-columns: 1fr; }
         }
     </style>
@@ -109,7 +113,7 @@
             <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p>新歓ボウリング大会！みんなでスコアを競いましょう。</p>
+                <p>新歓イベント第1弾！みんなでスコアを競いましょう。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -129,7 +133,7 @@
             <img src="asakusa.png">
             <div class="info">
                 <h3>浅草散策</h3>
-                <p>雷門から仲見世通りへ。下町の歴史とグルメを満喫！</p>
+                <p>雷門から仲見世通りへ。歴史と食べ歩きを満喫！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -139,7 +143,7 @@
             <img src="saren.png">
             <div class="info">
                 <h3>テニス練習</h3>
-                <p>テニスサークル練習会。初心者指導もあります！</p>
+                <p>土曜朝のテニス練習会。初心者指導もあります！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -159,7 +163,7 @@
             <img src="minatomirai.png">
             <div class="info">
                 <h3>みなとみらい</h3>
-                <p>夜景のきれいな横浜散策。観覧車や赤レンガへ。</p>
+                <p>横浜の夜景を眺めながら、みんなで楽しくウォーキング。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -179,7 +183,7 @@
             <img src="BBQ.png">
             <div class="info">
                 <h3>BBQ大会</h3>
-                <p>屋外でお肉を焼いて盛り上がろう！最高の親睦会です。</p>
+                <p>屋外で絶品お肉を焼いて盛り上がろう！最高の親睦会です。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -189,7 +193,7 @@
             <img src="saren.png">
             <div class="info">
                 <h3>テニス練習</h3>
-                <p>日曜練習会。試合形式で楽しくゲームをします！</p>
+                <p>日曜練習会！試合形式のミニゲームを中心に楽しみます。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -199,7 +203,7 @@
             <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p>第2回大会！リベンジしたい人、大歓迎です。</p>
+                <p>第2回ボウリング大会！リベンジ戦お待ちしています。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -209,7 +213,7 @@
             <img src="joshikai.png">
             <div class="info">
                 <h3>女子会</h3>
-                <p>今回はしゃぶしゃぶランチ！お肉をたくさん食べよう。</p>
+                <p>今回はしゃぶしゃぶランチ！美味しいお肉を堪能しましょう。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -219,7 +223,7 @@
             <img src="saren.png">
             <div class="info">
                 <h3>テニス練習</h3>
-                <p>4月最後のテニス練習！いい汗を流しましょう。</p>
+                <p>今月最後のテニス練習会。いい汗を流して締めくくり！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -229,7 +233,7 @@
             <img src="picnic.png">
             <div class="info">
                 <h3>ピクニック</h3>
-                <p>芝生の上でのんびり。お弁当を持って集合です！</p>
+                <p>芝生の上でのんびりお弁当。4月の締めくくりイベント！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
