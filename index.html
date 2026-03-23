@@ -1,190 +1,30 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>potatochips 2026 新歓予約</title>
-  </head>
-  <body>
-    
-    <h2 style="font-size: 2.5rem; font-weight: bold; color: #ffffff; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); text-align: center;">
-      PotatoChips 2026
-    </h2>
+/* 申し込みボタンのスタイル */
+.btn-entry {
+  display: inline-block;
+  background-color: #ff4b2b;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
 
-    <h2 style="font-size: 2rem; font-weight: bold; color: #2e2e2e; border-bottom: 4px solid #2e2e2e; padding-bottom: 5px; text-align: center;">
-      新歓予約フォーム一覧
-    </h2>
-    <div style="font-size: 1rem; margin: 0 30px; text-align: center; background: rgba(255,255,255,0.5); padding: 15px; border-radius: 10px;">
-      参加したい企画に申し込みをしてね！<br />
-      まだ公式ラインを追加していない人は申し込み前に追加してください！<br />
-      応募締め切りは各企画の前日までです。<br />
-      飛び込みで参加したい人は公式ラインまたは代持ちの誰かに聞いてみてください。
-    </div>
+.btn-entry:hover {
+  background-color: #ff416c;
+  opacity: 0.8;
+}
 
-    <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-      <a href="https://x.com/potatochips48th" target="_blank">
-        <img src="x.png" alt="X" style="width: 40px; margin: 0 10px; border-radius: 20%; object-fit: cover;">
-      </a>
-      <a href="https://www.instagram.com/potatochips_48th" target="_blank">
-        <img src="instagram.png" alt="Instagram" style="width: 40px; margin: 0 10px; border-radius: 20%; object-fit: cover;">
-      </a>
-      <a href="https://line.me/R/ti/p/@696mmrme" target="_blank">
-        <img src="line.png" alt="LINE" style="width: 40px; margin: 0 10px; border-radius: 20%; object-fit: cover;">
-      </a>
-    </div>
+/* SNSアイコンのサイズ調整 */
+.sns-icon {
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
 
-    <ul class="card-wrapper">
-      <li class="card">
-        <img src="bowling.png" alt="ボウリング" />
-        <h3><a href="#">4/8 ボウリング</a></h3>
-        <p>新歓一発目はボウリング！初心者でも楽しめるチーム戦で豪華景品を狙おう！🎳</p>
-      </li>
-
-      <li class="card">
-        <img src="kamakura.png" alt="鎌倉観光" />
-        <h3><a href="#">4/11 鎌倉観光</a></h3>
-        <p>小町通りで食べ歩き！歴史ある街並みを散策して、新入生同士仲良くなろう。🌸</p>
-      </li>
-
-      <li class="card">
-        <img src="asakusa.png" alt="浅草観光" />
-        <h3><a href="#">4/12 浅草観光</a></h3>
-        <p>雷門に集合！下町の風情を楽しみながら、おみくじや食べ歩きを満喫！⛩</p>
-      </li>
-
-      <li class="card">
-        <img src="saren.png" alt="サレン" />
-        <h3><a href="#">4/13 サレン🎾</a></h3>
-        <p>「サレン」はテニスのこと！ラケットは貸し出すので手ぶらでOK。楽しく打ち合おう！</p>
-      </li>
-
-      <li class="card">
-        <img src="joshikai.png" alt="女子会" />
-        <h3><a href="#">4/15 女子会(スイパラ)</a></h3>
-        <p>女子限定企画！今回は「スイパラ」で開催。甘いものを食べて女子トークで盛り上がろう💝</p>
-      </li>
-
-      <li class="card">
-        <img src="minatomirai.png" alt="みなとみらい" />
-        <h3><a href="#">4/16 みなとみらい</a></h3>
-        <p>横浜といえばみなとみらい🌃✨きれいな夜景を楽しめる映えるスポットを散策しよう！</p>
-      </li>
-
-      <li class="card">
-        <img src="joshikai.png" alt="女子会" />
-        <h3><a href="#">4/17 女子会(スイパラ)</a></h3>
-        <p>女子会第2弾！美味しいケーキを食べながら先輩に大学生活の相談もできちゃうチャンス🍰</p>
-      </li>
-
-      <li class="card">
-        <img src="BBQ.png" alt="BBQ" />
-        <h3><a href="#">4/19 BBQ🍖</a></h3>
-        <p>ポテト最大のイベント！班ごとにドライブして河原でBBQ！一番楽しい企画間違いなし！</p>
-      </li>
-
-      <li class="card">
-        <img src="saren.png" alt="サレン" />
-        <h3><a href="#">4/21 サレン🎾</a></h3>
-        <p>サークル練習会！運動してリフレッシュ。テニス未経験者も大歓迎です！</p>
-      </li>
-
-      <li class="card">
-        <img src="bowling.png" alt="ボウリング" />
-        <h3><a href="#">4/22 ボウリング</a></h3>
-        <p>ボウリング第2回！前回行けなかった人もぜひ。白熱の勝負を楽しみましょう🎳</p>
-      </li>
-
-      <li class="card">
-        <img src="joshikai.png" alt="女子会" />
-        <h3><a href="#">4/23 女子会(スイパラ)</a></h3>
-        <p>女子限定スイパラ企画🍰 履修登録のコツやサークルの裏話も聞けちゃうかも！？</p>
-      </li>
-
-      <li class="card">
-        <img src="saren.png" alt="サレン" />
-        <h3><a href="#">4/24 サレン🎾</a></h3>
-        <p>新歓サレン最終日！テニスの楽しさを体感して、ポテチの一員になろう！</p>
-      </li>
-
-      <li class="card">
-        <img src="piknic.png" alt="ピクニック" />
-        <h3><a href="#">4/25 ピクニック🧺</a></h3>
-        <p>芝生の上でのんびり。お弁当を食べながら最後の新歓イベントを楽しみましょう！</p>
-      </li>
-    </ul>
-
-    <style>
-      /* --- カードのデザイン設定 --- */
-      .card {
-        --card-gradient: rgba(0, 0, 0, 0.8);
-        --card-blend-mode: overlay;
-        background-color: #fff;
-        border-radius: 0.5rem;
-        box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-        padding-bottom: 1rem;
-        background-image: linear-gradient(
-          var(--card-gradient),
-          white max(9.5rem, 29vh)
-        );
-        overflow: hidden;
-        transition: transform 0.2s;
-      }
-      .card img {
-        border-radius: 0.5rem 0.5rem 0 0;
-        width: 100%;
-        object-fit: cover;
-        max-height: max(10rem, 30vh);
-        aspect-ratio: 4/3;
-        mix-blend-mode: var(--card-blend-mode);
-      }
-      .card img ~ * {
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
-      .card h3 {
-        margin-top: 1rem;
-        font-size: 1.25rem;
-      }
-      .card a {
-        color: inherit;
-        text-decoration: none;
-      }
-      .card p {
-        font-size: 0.9rem;
-        color: #666;
-      }
-      .card:hover,
-      .card:focus-within {
-        --card-gradient: #24a9d5 max(8.5rem, 30vh);
-        transform: translateY(-5px);
-      }
-
-      /* --- 全体のレイアウト設定 --- */
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: #ffffff;
-        background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png");
-        min-height: 100vh;
-        margin: 0;
-        padding: 2rem 1rem;
-        line-height: 1.5;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        color: #444;
-      }
-
-      .card-wrapper {
-        list-style: none;
-        padding: 0;
-        margin: 2rem auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-        grid-gap: 1.5rem;
-        max-width: 1200px;
-      }
-    </style>
-  </body>
-</html>
+/* ロゴのテキストスタイル */
+.logo-text {
+  color: white;
+  line-height: 65px;
+}
