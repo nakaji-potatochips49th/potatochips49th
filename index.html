@@ -6,7 +6,6 @@
     <title>4月の活動スケジュール</title>
     <style>
         body {
-            /* 背景に波の画像を設定 */
             background-image: url("image_3071c0.jpg");
             background-size: cover;
             background-attachment: fixed;
@@ -24,21 +23,19 @@
             margin-bottom: 40px;
         }
 
-        /* 1行に3つ並べるための設定 */
         .container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3列固定 */
-            gap: 25px; /* カード同士の隙間 */
+            grid-template-columns: repeat(3, 1fr); /* 1行に3列 */
+            gap: 25px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        /* それぞれの「枠（カード）」 */
         .card {
-            background: rgba(255, 255, 255, 0.95); /* 白背景（少しだけ透ける） */
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* 浮き出し効果の影 */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -46,7 +43,7 @@
         }
 
         .card:hover {
-            transform: translateY(-5px); /* マウスを置くと少し浮く */
+            transform: translateY(-5px);
         }
 
         .date-text {
@@ -60,8 +57,8 @@
 
         .card img {
             width: 100%;
-            height: 160px; /* 写真の高さを統一 */
-            object-fit: cover; /* 比率を保ってきれいに切り抜き */
+            height: 150px;
+            object-fit: cover;
         }
 
         .info {
@@ -69,41 +66,36 @@
         }
 
         .info h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             font-size: 18px;
             color: #333;
         }
 
-        /* 詳細説明のスタイル */
         .info p {
-            font-size: 13px;
+            font-size: 12px;
             color: #666;
-            line-height: 1.6;
+            line-height: 1.5;
             margin-bottom: 15px;
-            min-height: 40px; /* 文字数が違っても高さが揃うように設定 */
+            min-height: 45px;
         }
 
         .btn-entry {
             display: inline-block;
-            background-color: #ff4b2b;
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
             color: white;
             padding: 8px 20px;
             border-radius: 25px;
             text-decoration: none;
             font-size: 12px;
             font-weight: bold;
-            transition: background 0.3s;
         }
 
-        .btn-entry:hover {
-            background-color: #ff416c;
+        /* スマホ対応 */
+        @media (max-width: 800px) {
+            .container { grid-template-columns: repeat(2, 1fr); }
         }
-
-        /* スマホで見るときは1列にする */
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 500px) {
+            .container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -114,65 +106,135 @@
     <div class="container">
         <div class="card">
             <div class="date-text">4/8 (Mon)</div>
-            <img src="bowling.png" alt="ボウリング">
+            <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p>初心者大歓迎！みんなでハイスコアを目指しましょう。</p>
+                <p>新歓ボウリング大会！みんなでスコアを競いましょう。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
 
         <div class="card">
             <div class="date-text">4/11 (Thu)</div>
-            <img src="kamakura.png" alt="鎌倉観光">
+            <img src="kamakura.png">
             <div class="info">
                 <h3>鎌倉観光</h3>
-                <p>江ノ電に乗って、古都の街並みと海を満喫する一日です。</p>
+                <p>江ノ電に乗って、古都の街並みと海を楽しむ散策旅。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
 
         <div class="card">
             <div class="date-text">4/12 (Fri)</div>
-            <img src="asakusa.png" alt="浅草散策">
+            <img src="asakusa.png">
             <div class="info">
                 <h3>浅草散策</h3>
-                <p>雷門から仲見世通りを歩いて、江戸の風情を感じましょう。</p>
+                <p>雷門から仲見世通りへ。下町の歴史とグルメを満喫！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
 
         <div class="card">
             <div class="date-text">4/13 (Sat)</div>
-            <img src="saren.png" alt="テニス練習">
+            <img src="saren.png">
             <div class="info">
                 <h3>テニス練習</h3>
-                <p>基礎練習からミニゲームまで、楽しく汗を流します！</p>
+                <p>テニスサークル練習会。初心者指導もあります！</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="date-text">4/15 (Mon)</div>
+            <img src="saren.png">
+            <div class="info">
+                <h3>テニス練習</h3>
+                <p>放課後練習！基本フォームをじっくり確認します。</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="date-text">4/16 (Tue)</div>
+            <img src="minatomirai.png">
+            <div class="info">
+                <h3>みなとみらい</h3>
+                <p>夜景のきれいな横浜散策。観覧車や赤レンガへ。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
 
         <div class="card">
             <div class="date-text">4/17 (Wed)</div>
-            <img src="joshikai.png" alt="女子会">
+            <img src="joshikai.png">
             <div class="info">
                 <h3>女子会</h3>
-                <p>スイパラでお菓子を囲みながら、おしゃべりを楽しみましょう。</p>
+                <p>スイパラでお菓子パーティー！甘いもの好き集まれ。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
 
         <div class="card">
             <div class="date-text">4/19 (Fri)</div>
-            <img src="BBQ.png" alt="BBQ大会">
+            <img src="BBQ.png">
             <div class="info">
                 <h3>BBQ大会</h3>
-                <p>屋外でおいしいお肉を！最高の思い出を作りましょう。</p>
+                <p>屋外でお肉を焼いて盛り上がろう！最高の親睦会です。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
-        
+
+        <div class="card">
+            <div class="date-text">4/21 (Sun)</div>
+            <img src="saren.png">
+            <div class="info">
+                <h3>テニス練習</h3>
+                <p>日曜練習会。試合形式で楽しくゲームをします！</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
         </div>
+
+        <div class="card">
+            <div class="date-text">4/22 (Mon)</div>
+            <img src="bowling.png">
+            <div class="info">
+                <h3>ボウリング</h3>
+                <p>第2回大会！リベンジしたい人、大歓迎です。</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="date-text">4/23 (Tue)</div>
+            <img src="joshikai.png">
+            <div class="info">
+                <h3>女子会</h3>
+                <p>今回はしゃぶしゃぶランチ！お肉をたくさん食べよう。</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="date-text">4/24 (Wed)</div>
+            <img src="saren.png">
+            <div class="info">
+                <h3>テニス練習</h3>
+                <p>4月最後のテニス練習！いい汗を流しましょう。</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="date-text">4/25 (Thu)</div>
+            <img src="picnic.png">
+            <div class="info">
+                <h3>ピクニック</h3>
+                <p>芝生の上でのんびり。お弁当を持って集合です！</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
