@@ -3,87 +3,170 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>2026 potatochips 新歓</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
   <header>
     <div class="container">
       <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        <h2 class="logo-text">potatochips 2026</h2>
       </div>
-      <span class="fa fa-bars menu-icon"></span>
       <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
+        <a href="#sns">SNS</a>
+        <a href="#events">Schedule</a>
       </div>
     </div>
   </header>
+
   <div class="top-wrapper">
     <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
+      <h1>WELCOME TO potatochips!</h1>
+      <p>2026年度 新入生歓迎イベント開催決定！<br>
+      テニスも遊びも全力なサークルです。まずは気軽に参加してみてね！</p>
+      
+      <div id="sns" class="btn-wrapper">
+        <a href="https://www.instagram.com/あなたのID" class="btn signup"><img src="instagram.png" style="width:20px; vertical-align:middle;"> Instagram</a>
+        <a href="https://line.me/R/ti/p/あなたのURL" class="btn facebook" style="background-color: #06C755;"><img src="line.png" style="width:20px; vertical-align:middle;"> LINE</a>
+        <a href="https://x.com/あなたのID" class="btn twitter"><img src="x.png" style="width:20px; vertical-align:middle;"> X (Twitter)</a>
       </div>
     </div>
   </div>
-  <div class="lesson-wrapper">
+
+  <div id="events" class="lesson-wrapper">
     <div class="container">
       <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
+        <h2>Spring Events Schedule</h2>
+        <p>※各イベントの「申込」ボタンからGoogleフォームへ飛べます</p>
       </div>
+
       <div class="lessons">
         <div class="lesson">
           <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
+            <img src="bowling.png">
+            <p>4/8 ボウリング</p>
           </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+          <p class="text-contents">新歓一発目はボウリング！初心者でも楽しめるチーム戦で豪華景品を狙おう！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
         </div>
+
         <div class="lesson">
           <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
+            <img src="kamakura.png">
+            <p>4/11 鎌倉観光</p>
           </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
+          <p class="text-contents">小町通りで食べ歩き！歴史ある街並みを散策して、新入生同士仲良くなろう。</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
         </div>
+
         <div class="lesson">
           <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
+            <img src="asakusa.png">
+            <p>4/12 浅草観光</p>
           </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
+          <p class="text-contents">雷門に集合！下町の風情を楽しみながら、おみくじや食べ歩きを満喫！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
         </div>
+
         <div class="lesson">
           <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
+            <img src="saren.png">
+            <p>4/13 サレン(テニス)</p>
           </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
+          <p class="text-contents">「サレン」はテニスのこと！ラケットは貸し出すので手ぶらでOK。楽しく打ち合おう！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
         </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="joshikai.png">
+            <p>4/15 女子会</p>
+          </div>
+          <p class="text-contents">今回は「スイパラ」で開催！甘いものを食べながら先輩に大学生活の不安を相談しちゃおう。</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="minatomirai.png">
+            <p>4/16 みなとみらい</p>
+          </div>
+          <p class="text-contents">横浜の夜景をバックにお散歩。エモい写真を撮りながら楽しく交流しましょう！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="joshikai.png">
+            <p>4/17 女子会</p>
+          </div>
+          <p class="text-contents">スイパラ女子会第2弾！美味しいケーキを食べながら、女子トークで盛り上がりましょう。</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="BBQ.png">
+            <p>4/19 BBQ</p>
+          </div>
+          <p class="text-contents">屋外でみんなでお肉を焼こう！サークルの雰囲気を知るには一番のビッグイベント！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="saren.png">
+            <p>4/21 サレン(テニス)</p>
+          </div>
+          <p class="text-contents">放課後テニス！運動してリフレッシュ。経験者も未経験者も大歓迎です！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="bowling.png">
+            <p>4/22 ボウリング</p>
+          </div>
+          <p class="text-contents">ボウリング再び！前回行けなかった人もぜひ。白熱の勝負を楽しみましょう！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="joshikai.png">
+            <p>4/23 女子会</p>
+          </div>
+          <p class="text-contents">スイパラでアフタヌーンティー気分。履修登録のコツなども聞けるチャンス！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込み</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="saren.png">
+            <p>4/24 サレン(テニス)</p>
+          </div>
+          <p class="text-contents">新歓サレン最終日。テニスの楽しさを体感して、ポテチの一員になろう！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="piknic.png">
+            <p>4/25 ピクニック</p>
+          </div>
+          <p class="text-contents">芝生の上でのんびり。お弁当を食べながら、最後の新歓イベントを楽しみましょう！</p>
+          <a href="フォームのURL" class="btn-entry">イベントに申し込む</a>
+        </div>
+
       </div>
       <div class="clear"></div>
     </div>
   </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
+
   <footer>
     <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
+      <p>Learn to Code, Learn to be Creative. @2026 potatochips</p>
     </div>
   </footer>
 </body>
