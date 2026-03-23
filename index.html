@@ -2,132 +2,87 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>活動スケジュール・申し込み</title>
+    <title>4月活動スケジュール</title>
+    <style>
+        /* ここにデザインの命令を書きます */
+        body {
+            background-image: url("image_3071c0.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            width: 180px;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .date {
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .btn-entry {
+            display: inline-block;
+            background-color: #ff4b2b;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .btn-entry:hover {
+            background-color: #ff416c;
+            opacity: 0.8;
+        }
+    </style>
 </head>
-<body background="image_3071c0.jpg" style="margin:0; padding:20px; font-family:sans-serif;">
+<body>
 
-    <center>
-        <h1 style="color:white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 35px; margin-bottom: 30px;">
-            4月の活動スケジュール
-        </h1>
-    </center>
+    <h1>4月活動スケジュール</h1>
 
-    <table align="center" border="0" cellpadding="15" cellspacing="0" style="max-width:1100px; width:100%;">
-        
-        <tr>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px; width:23%;">
-                <font color="#666" size="2"><b>4/8 (Mon)</b></font><br>
-                <img src="bowling.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">ボウリング</h3>
-                <a href="https://forms.gle/YOUR_FORM_URL" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-
-            <td width="10"></td>
-
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px; width:23%;">
-                <font color="#666" size="2"><b>4/11 (Thu)</b></font><br>
-                <img src="kamakura.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">鎌倉観光</h3>
-                <a href="https://forms.gle/YOUR_FORM_URL" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-
-            <td width="10"></td>
-
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px; width:23%;">
-                <font color="#666" size="2"><b>4/12 (Fri)</b></font><br>
-                <img src="asakusa.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">浅草散策</h3>
-                <a href="https://forms.gle/YOUR_FORM_URL" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-
-            <td width="10"></td>
-
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px; width:23%;">
-                <font color="#666" size="2"><b>4/13 (Sat)</b></font><br>
-                <img src="saren.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">テニス練習</h3>
-                <a href="https://forms.gle/YOUR_FORM_URL" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-        </tr>
-
-        <tr><td colspan="7" height="15"></td></tr> <tr>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/15 (Mon)</b></font><br>
-                <img src="saren.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">テニス練習</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-            <td></td>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/16 (Tue)</b></font><br>
-                <img src="minatomirai.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">みなとみらい</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-            <td></td>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/17 (Wed)</b></font><br>
-                <img src="joshikai.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">女子会</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-            <td></td>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/19 (Fri)</b></font><br>
-                <img src="BBQ.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">BBQ大会</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-        </tr>
-
-        <tr><td colspan="7" height="15"></td></tr>
-
-        <tr>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/21 (Sun)</b></font><br>
-                <img src="saren.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">テニス練習</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-            <td></td>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/22 (Mon)</b></font><br>
-                <img src="bowling.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">ボウリング</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-            <td></td>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/23 (Tue)</b></font><br>
-                <img src="joshikai.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">女子会</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-            <td></td>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/24 (Wed)</b></font><br>
-                <img src="saren.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">テニス練習</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-        </tr>
-
-        <tr><td colspan="7" height="15"></td></tr>
-
-        <tr>
-            <td align="center" bgcolor="#ffffff" style="border-radius:10px;">
-                <font color="#666" size="2"><b>4/25 (Thu)</b></font><br>
-                <img src="picnic.png" width="100" height="80" style="object-fit:cover; border-radius:5px; margin:5px 0;">
-                <h3 style="font-size:14px; margin:5px 0;">ピクニック</h3>
-                <a href="#" style="display:inline-block; background:#ff4b2b; color:white; padding:5px 10px; text-decoration:none; font-size:11px; border-radius:3px;">申し込み</a>
-            </td>
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-    </table>
-
-    <center style="margin-top:40px;">
-        <p style="color:white; font-size:12px;">© 2024 Activity Group</p>
-    </center>
+    <div class="container">
+        <div class="card"><span class="date">4/8</span><img src="bowling.png"><h3>ボウリング</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/11</span><img src="kamakura.png"><h3>鎌倉観光</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/12</span><img src="asakusa.png"><h3>浅草散策</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/13</span><img src="saren.png"><h3>テニス練習</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/15</span><img src="saren.png"><h3>テニス練習</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/16</span><img src="minatomirai.png"><h3>みなとみらい</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/17</span><img src="joshikai.png"><h3>女子会</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/19</span><img src="BBQ.png"><h3>BBQ</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/21</span><img src="saren.png"><h3>テニス練習</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/22</span><img src="bowling.png"><h3>ボウリング</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/23</span><img src="joshikai.png"><h3>女子会</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/24</span><img src="saren.png"><h3>テニス練習</h3><a href="#" class="btn-entry">申し込み</a></div>
+        <div class="card"><span class="date">4/25</span><img src="picnic.png"><h3>ピクニック</h3><a href="#" class="btn-entry">申し込み</a></div>
+    </div>
 
 </body>
 </html>
