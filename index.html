@@ -7,7 +7,6 @@
     <title>新歓予約フォーム一覧</title>
     <style>
         body {
-            /* 指定された画像を背景に設定 */
             background-image: url("image_5.png");
             background-size: cover;
             background-attachment: fixed;
@@ -17,7 +16,6 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
-        /* PotatoChips2026をセンターに配置 */
         .top-brand-title {
             font-size: 2.5rem;
             font-weight: bold;
@@ -28,37 +26,11 @@
             width: 100%;
         }
 
-        /* SNSアイコンエリア */
-        .sns-links {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .sns-links a {
-            text-decoration: none;
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .sns-links img {
-            width: 45px; /* アイコンのサイズ */
-            height: 45px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        /* マウスを乗せた時の動き */
-        .sns-links img:hover {
-            transform: scale(1.1);
-        }
-
-        /* ヘッダー部分の設定（中央寄せ） */
         .header-section {
             text-align: center;
             color: white;
             max-width: 800px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 20px auto;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
@@ -78,7 +50,29 @@
             margin: 0;
         }
 
-        /* 1行に3列並べる設定 */
+        .sns-links {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sns-links a {
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .sns-links img {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .sns-links img:hover {
+            transform: scale(1.1);
+        }
+
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -87,7 +81,6 @@
             margin: 0 auto;
         }
 
-        /* カード（枠）のデザイン */
         .card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -120,6 +113,9 @@
 
         .info {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .info h3 {
@@ -135,6 +131,7 @@
             margin-bottom: 20px;
             min-height: 60px;
             text-align: left;
+            flex-grow: 1;
         }
 
         .btn-entry {
@@ -147,9 +144,9 @@
             font-size: 13px;
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(255, 75, 43, 0.3);
+            margin-top: auto;
         }
 
-        /* スマホ・タブレット対応 */
         @media (max-width: 900px) {
             .container { grid-template-columns: repeat(2, 1fr); }
         }
@@ -168,7 +165,6 @@
 
     <div class="header-section">
         <h1>新歓予約フォーム一覧</h1>
-        
         <p>
             参加したい企画に申し込みをしてね！<br />
             まだ公式ラインを追加していない人は申し込み前に追加してください！<br />
@@ -191,19 +187,13 @@
     </div>
 
     <div class="container">
-        </div>
-
-    <div class="container">
         <div class="card">
             <div class="date-text">4/8 (Wed)</div>
             <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p><strong>参加費:500円</strong><br />
-                    新歓イベント第1弾！班に分かれてチーム戦をしたり、個人で競ったりするよ！🎳<br />
-                    上手い下手関係なく、とにかく盛り上がる！そして点数が上位の人には豪華景品が...!?
-                </p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p><strong>参加費:500円</strong><br />新歓イベント第1弾！チーム戦や個人戦で盛り上がろう！🎳 上位には豪華景品も...!?</p>
+                <a href="https://forms.gle/ZB4SEYiEgGeJBAPY8" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -212,10 +202,8 @@
             <img src="kamakura.png">
             <div class="info">
                 <h3>鎌倉観光</h3>
-                <p>参加費:500円<br />
-                    鎌倉の観光スポットを巡りながらたくさん食べ歩きしよう！<br />
-                    班ごとにまわるので先輩、同級生と仲良くなれること間違いなし！❕</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />観光スポットを巡りながら食べ歩きしよう！班ごとにまわるので先輩や同級生と仲良くなれるよ！❕</p>
+                <a href="https://forms.gle/GuNqfCW7ZSbJV9iX7" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -224,10 +212,8 @@
             <img src="asakusa.png">
             <div class="info">
                 <h3>浅草散策</h3>
-                <p>参加費:500円<br />
-                    班に分かれて浅草を観光するよ⛩<br />
-                    グルメ、観光スポットを満喫しよう！歴史ある街並みをみんなで歩きましょう。</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />班に分かれて浅草を観光するよ⛩ グルメ、観光スポットを満喫しよう！</p>
+                <a href="https://forms.gle/hW8j92wndHtBeCtK6" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -236,11 +222,8 @@
             <img src="saren.png">
             <div class="info">
                 <h3>サレン(17:00~19:00)🎾</h3>
-                <p>三ッ沢公園のテニスコートで2時間テニスをするよ！<br />
-                    初心者も経験者も絶対楽しめます！<br />
-                    ポテトの雰囲気を知るならまずはここから！途中参加も大歓迎！
-                </p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>三ッ沢公園でテニス！初心者も経験者も絶対楽しめます！ポテトの雰囲気を知るならまずはここから！</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCemdoyXkjXtKTihzZROu6dRmFcC9_Y2NDcdvhtBBY4Qxihw/viewform?usp=publish-editor" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -249,10 +232,8 @@
             <img src="saren.png">
             <div class="info">
                 <h3>サレン & 上級練習会🎾</h3>
-                <p>17:00〜19:00は全員で、19:00〜21:00は上級練習会を実施！<br />
-                    テニスをガッツリやりたい人も、楽しく打ちたい人もぜひきてね！<br />
-                    ラケットの貸出もあります。</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>17:00〜19:00は全員、19:00〜21:00は上級練習会を実施！ラケット貸出もあります。</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKxF5d3PpScBtrmwjBeP_GUs1jk3ggzNsp61zuXkcJMyOaIw/viewform?usp=publish-editor" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -261,11 +242,8 @@
             <img src="minatomirai.png">
             <div class="info">
                 <h3>みなとみらい</h3>
-                <p>参加費:500円<br />
-                    横浜といえばみなとみらい🌃✨<br />
-                    きれいな夜景を楽しめて映えるスポットもたくさんあるよ！！<br />
-                    中華街においしいものたくさん食べに行こう！</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />横浜といえばみなとみらい🌃✨ 夜景や中華街で美味しいものを食べに行こう！</p>
+                <a href="https://forms.gle/uyjyMkrprmDYvgCB7" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -274,10 +252,8 @@
             <img src="joshikai.png">
             <div class="info">
                 <h3>女子会</h3>
-                <p>参加費:500円<br />
-                    女子限定の企画！ビュッフェで食べまくるよ！🐙<br />
-                    明るくておもしろい先輩たちと女子トークで盛り上がろう💝</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />女子限定企画！ビュッフェで食べまくるよ！先輩たちと女子トークで盛り上がろう💝</p>
+                <a href="https://forms.gle/rA8u4kSonk65xeCX9" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -286,10 +262,8 @@
             <img src="BBQ.png">
             <div class="info">
                 <h3>BBQ</h3>
-                <p>参加費:500円<br />
-                    ポテトの新歓一番のビッグイベント！🍖<br />
-                    班ごとにドライブしながら河原へ向かいます！一番楽しい企画間違いなし！</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />ポテトの新歓一番のビッグイベント！🍖 ドライブしながら河原へ向かうよ！</p>
+                <a href="https://forms.gle/mxwU9nGWcJmKC83z7" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -298,10 +272,8 @@
             <img src="saren.png">
             <div class="info">
                 <h3>サレン & 上級練習会🎾</h3>
-                <p>三ッ沢公園のテニスコートでテニス！<br />
-                    19:00からは上級練習会も！<br />
-                    たくさん動いて新生活のストレスをリフレッシュしよう！</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>三ッ沢公園でテニス！19:00からは上級練習会も！たくさん動いてリフレッシュしよう！</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6gcypZWs5BgYPqtJk_W-ArKVxSC383ipo1hOoKR4OYA-SSQ/viewform?usp=publish-editor" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -310,10 +282,8 @@
             <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p>参加費:500円<br />
-                    第2回ボウリング大会！🎳<br />
-                    豪華景品のリベンジチャンス！5限後からの参加も大歓迎です！</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />第2回ボウリング大会！🎳 5限後からの参加も大歓迎です！</p>
+                <a href="https://forms.gle/1bPRje7Uo5mYKizH9" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -322,10 +292,8 @@
             <img src="joshikai.png">
             <div class="info">
                 <h3>女子会</h3>
-                <p>参加費:500円<br />
-                    女子限定企画！今回はスイパラで甘いものパーティー！🍰<br />
-                    女子同士、気軽に参加して仲良くなっちゃおう💝</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />女子限定企画！今回はスイパラで甘いものパーティー！🍰 気軽に仲良くなろう💝</p>
+                <a href="https://forms.gle/wMzjLmRKuSCCZXjB8" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -334,9 +302,8 @@
             <img src="saren.png">
             <div class="info">
                 <h3>サレン(17:00~19:00)🎾</h3>
-                <p>今月最後のサレン！ポテトを知るラストチャンス！<br />
-                    テニスをしたことがなくても全然大丈夫。最後みんなで楽しみましょう❢</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>今月最後のサレン！最後みんなで楽しみましょう❢</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_1lGftINylJJKm5jXFnUFtmfzb0s_Phkno_TDMqURv2I_2w/viewform?usp=header" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
 
@@ -345,10 +312,8 @@
             <img src="picnic.png">
             <div class="info">
                 <h3>ピクニック</h3>
-                <p>参加費:500円<br />
-                    芝生の上でのんびりおしゃべり！<br />
-                    サッカーやフリスビーなど外遊びも満喫！4月の締めくくりイベントです❣</p>
-                <a href="#" class="btn-entry">申し込み</a>
+                <p>参加費:500円<br />芝生の上でのんびりおしゃべり！外遊びも満喫！4月の締めくくりイベント❣</p>
+                <a href="https://forms.gle/PcfeXX3PnkU7FasY8" target="_blank" class="btn-entry">申し込み</a>
             </div>
         </div>
     </div>
