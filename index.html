@@ -17,14 +17,15 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
-        /* PotatoChips2026タイトルのスタイル（中央寄せ） */
-        .top-title {
+        /* 【修正箇所1】PotatoChips2026をセンターに配置 */
+        .top-brand-title {
             font-size: 2.5rem;
             font-weight: bold;
             color: #ffffff;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             text-align: center; /* 中央寄せ */
-            margin-bottom: 20px;
+            margin: 20px 0;
+            width: 100%;
         }
 
         /* ヘッダー部分の設定（中央寄せ） */
@@ -77,13 +78,13 @@
             transform: translateY(-5px);
         }
 
-        /* 【修正箇所】日付部分をもう1サイズ大きく変更 */
+        /* 【修正箇所2】日付部分をもう1サイズ大きく変更 */
         .date-text {
             background-color: #f8f8f8;
-            padding: 10px;
-            font-size: 15px; /* 13pxから大きくしました */
-            color: #555;
-            font-weight: bold;
+            padding: 12px; /* 少し余裕を持たせました */
+            font-size: 18px; /* 15pxからさらに大きくしました */
+            color: #444;
+            font-weight: 800; /* 太さも強調 */
             border-bottom: 1px solid #eee;
         }
 
@@ -131,14 +132,14 @@
         @media (max-width: 600px) {
             .container { grid-template-columns: 1fr; }
             h1 { font-size: 28px; }
-            .top-title { font-size: 2rem; }
+            .top-brand-title { font-size: 2rem; }
             .header-section p { font-size: 14px; padding: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-title">PotatoChips2026</div>
+    <div class="top-brand-title">PotatoChips2026</div>
 
     <div class="header-section">
         <h1>新歓予約フォーム一覧</h1>
