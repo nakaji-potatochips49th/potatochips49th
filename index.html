@@ -8,7 +8,7 @@
     <style>
         body {
             /* 指定された画像を背景に設定 */
-            background-image: url("screenshot wave.png");
+            background-image: url("image_5.png");
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -24,8 +24,33 @@
             color: #ffffff;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             text-align: center;
-            margin: 20px 0;
+            margin: 20px 0 10px 0;
             width: 100%;
+        }
+
+        /* SNSアイコンエリア */
+        .sns-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sns-links a {
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .sns-links img {
+            width: 45px; /* アイコンのサイズ */
+            height: 45px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* マウスを乗せた時の動き */
+        .sns-links img:hover {
+            transform: scale(1.1);
         }
 
         /* ヘッダー部分の設定（中央寄せ） */
@@ -78,7 +103,6 @@
             transform: translateY(-5px);
         }
 
-        /* 日付部分のサイズ設定 */
         .date-text {
             background-color: #f8f8f8;
             padding: 12px;
@@ -134,12 +158,25 @@
             h1 { font-size: 28px; }
             .top-brand-title { font-size: 2rem; }
             .header-section p { font-size: 14px; padding: 15px; }
+            .sns-links img { width: 40px; height: 40px; }
         }
     </style>
 </head>
 <body>
 
     <div class="top-brand-title">PotatoChips2026</div>
+
+    <div class="sns-links">
+        <a href="https://www.instagram.com/potatochips_49th?igsh=eWlma2FvaGxmdng4" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://lin.ee/op4LQtgR" target="_blank">
+            <img src="line.png" alt="LINE">
+        </a>
+        <a href="https://x.com/potatochips49th?s=11" target="_blank">
+            <img src="x.png" alt="X">
+        </a>
+    </div>
 
     <div class="header-section">
         <h1>新歓予約フォーム一覧</h1>
