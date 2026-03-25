@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
-    <title>4月の活動スケジュール</title>
+    <title>新歓予約フォーム一覧</title>
     <style>
         body {
             /* 背景に波の画像を設定 */
@@ -17,12 +17,30 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
-        h1 {
-            color: white;
+        /* ヘッダー部分の設定（中央寄せ） */
+        .header-section {
             text-align: center;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-            font-size: 32px;
-            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* タイトル下の説明文を中央寄せ＆少し強調 */
+        .header-section p {
+            background: rgba(0, 0, 0, 0.3); /* 文字を読みやすくするための薄い背景 */
+            padding: 25px;
+            border-radius: 15px;
+            line-height: 1.8;
+            font-size: 16px;
+            display: inline-block;
+            text-align: center; /* センタリング */
+            margin: 0;
         }
 
         /* 1行に3列並べる設定 */
@@ -30,7 +48,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -61,57 +79,65 @@
 
         .card img {
             width: 100%;
-            height: 150px;
+            height: 160px;
             object-fit: cover;
         }
 
         .info {
-            padding: 15px;
+            padding: 20px;
         }
 
         .info h3 {
-            margin: 0 0 8px 0;
+            margin: 0 0 10px 0;
             font-size: 18px;
             color: #333;
         }
 
+        /* 【修正箇所】詳細テキストを1サイズ大きく、読みやすく変更 */
         .info p {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 15px;
-            min-height: 45px; /* 高さを揃える */
+            font-size: 14px; /* 12pxから大きくしました */
+            color: #333;    /* 文字色を少し濃くしました */
+            line-height: 1.7;
+            margin-bottom: 20px;
+            min-height: 60px; /* カードの高さを揃えるため */
+            text-align: left; /* 説明文は左寄せが見やすいです */
         }
 
         .btn-entry {
             display: inline-block;
             background: linear-gradient(to right, #ff4b2b, #ff416c);
             color: white;
-            padding: 8px 20px;
+            padding: 10px 30px;
             border-radius: 25px;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 75, 43, 0.3);
         }
 
         /* スマホ・タブレット対応 */
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
             .container { grid-template-columns: repeat(2, 1fr); }
         }
-        @media (max-width: 550px) {
+        @media (max-width: 600px) {
             .container { grid-template-columns: 1fr; }
+            h1 { font-size: 28px; }
+            .header-section p { font-size: 14px; padding: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <h1>新歓予約フォーム一覧</h1>
-    <p>参加したい企画に申し込みをしてね！<br />
-        まだ公式ラインを追加していない人は申し込み前に追加してください！<br />
-        応募締め切りは各企画の前日までです。<br />
-        飛び込みで参加したい人は公式ラインまたは代持ちの誰かに聞いてみてください。<br />
-        ＊新歓への参加は一年生のみです
-    </p>
+    <div class="header-section">
+        <h1>新歓予約フォーム一覧</h1>
+        <p>
+            参加したい企画に申し込みをしてね！<br />
+            まだ公式ラインを追加していない人は申し込み前に追加してください！<br />
+            応募締め切りは各企画の前日までです。<br />
+            当日の飛び入り参加も大歓迎！その場合は、公式ラインまたは代持ちの誰かに聞いてみてください！<br />
+            <strong>＊新歓への参加は一年生のみです</strong>
+        </p>
+    </div>
 
     <div class="container">
         <div class="card">
@@ -119,10 +145,9 @@
             <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p>参加費:500円<br />
+                <p><strong>参加費:500円</strong><br />
                     新歓イベント第1弾！班に分かれてチーム戦をしたり、個人で競ったりするよ！🎳<br />
-                    上手い下手関係なく、とにかく盛り上がる！そして...点数が上位の人には豪華景品が...!?<br />
-                    5限後からでも大歓迎！
+                    上手い下手関係なく、とにかく盛り上がる！そして点数が上位の人には豪華景品が...!?
                 </p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
@@ -133,10 +158,9 @@
             <img src="kamakura.png">
             <div class="info">
                 <h3>鎌倉観光</h3>
-                <p>参加費:500円<br />
+                <p><strong>参加費:500円</strong><br />
                     鎌倉の観光スポットを巡りながらたくさん食べ歩きしよう！<br />
-                    班ごとにまわるので先輩、同級生と仲良くなれること間違いなし！<br />
-                    鎌倉に行ったことある人もない人もぜひ参加してみてね❕</p>
+                    班ごとにまわるので先輩、同級生と仲良くなれること間違いなし！❕</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -146,9 +170,9 @@
             <img src="asakusa.png">
             <div class="info">
                 <h3>浅草散策</h3>
-                <p>参加費:500円<br />
+                <p><strong>参加費:500円</strong><br />
                     班に分かれて浅草を観光するよ⛩<br />
-                    グルメ、観光スポットを満喫しよう！</p>
+                    グルメ、観光スポットを満喫しよう！歴史ある街並みをみんなで歩きましょう。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -158,11 +182,9 @@
             <img src="saren.png">
             <div class="info">
                 <h3>サレン(17:00~19:00)🎾</h3>
-                <p>サークル練習会。通称サレン🎾<br />
-                    三ッ沢公園のテニスコートで2時間テニスをするよ！<br />
-                    テニスやったことない人も上手な人も絶対楽しめます！<br />
-                    ポテトの様子を知りたかったらまずはサレンに行ってみよう！<br />
-                    途中参加も大歓迎！
+                <p>三ッ沢公園のテニスコートで2時間テニスをするよ！<br />
+                    初心者も経験者も絶対楽しめます！<br />
+                    ポテトの雰囲気を知るならまずはここから！途中参加も大歓迎！
                 </p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
@@ -172,12 +194,10 @@
             <div class="date-text">4/15 (Wed)</div>
             <img src="saren.png">
             <div class="info">
-                <h3>サレン(17:00~19:00)&上級練習会(19:00~21:00)🎾</h3>
-                <p>三ッ沢公園のテニスコートでテニスをするよ！<br />
-                    テニスやったことない人も上手な人も絶対楽しめるのでぜひきてね！<br />
-                    ポテトの様子を知りたかったらまずはサレンに行ってみよう！<br />
-                    19:00~21:00には上級練習会も実施します！<br />
-                    途中参加も大歓迎！</p>
+                <h3>サレン & 上級練習会🎾</h3>
+                <p>17:00〜19:00は全員で、19:00〜21:00は上級練習会を実施！<br />
+                    テニスをガッツリやりたい人も、楽しく打ちたい人もぜひきてね！<br />
+                    ラケットの貸出もあります。</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -187,7 +207,7 @@
             <img src="minatomirai.png">
             <div class="info">
                 <h3>みなとみらい</h3>
-                <p>参加費:500円<br />
+                <p><strong>参加費:500円</strong><br />
                     横浜といえばみなとみらい🌃✨<br />
                     きれいな夜景を楽しめて映えるスポットもたくさんあるよ！！<br />
                     中華街においしいものたくさん食べに行こう！</p>
@@ -200,9 +220,8 @@
             <img src="joshikai.png">
             <div class="info">
                 <h3>女子会</h3>
-                <p>参加費:500円<br />
-                    女子限定の企画！<br />
-                    ビュッフェで食べまくるよ！🐙<br />
+                <p><strong>参加費:500円</strong><br />
+                    女子限定の企画！ビュッフェで食べまくるよ！🐙<br />
                     明るくておもしろい先輩たちと女子トークで盛り上がろう💝</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
@@ -213,10 +232,9 @@
             <img src="BBQ.png">
             <div class="info">
                 <h3>BBQ</h3>
-                <p>参加費:500円<br />
-                    ポテトの新歓で一番のビッグイベントBBQ！🍖<br />
-                    班ごとにドライブしながらBBQ場に向かって河原でBBQをします！<br />
-                    一番楽しい企画間違いなし！</p>
+                <p><strong>参加費:500円</strong><br />
+                    ポテトの新歓一番のビッグイベント！🍖<br />
+                    班ごとにドライブしながら河原へ向かいます！一番楽しい企画間違いなし！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -225,12 +243,10 @@
             <div class="date-text">4/21 (Tue)</div>
             <img src="saren.png">
             <div class="info">
-                <h3>サレン(17:00~19:00)&上級練習会(19:00~21:00)🎾</h3>
-                <p>三ッ沢公園のテニスコートでテニスをするよ！<br />
-                    テニスやったことない人も上手な人も絶対楽しめるのでぜひきてね！<br />
-                    ポテトの様子を知りたかったらまずはサレンに行ってみよう！<br />
-                    19:00~21:00には上級練習会も実施します！<br />
-                    途中参加も大歓迎！</p>
+                <h3>サレン & 上級練習会🎾</h3>
+                <p>三ッ沢公園のテニスコートでテニス！<br />
+                    19:00からは上級練習会も！<br />
+                    たくさん動いて新生活のストレスをリフレッシュしよう！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -240,11 +256,9 @@
             <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p>参加費:500円<br />
-                    第2回ボウリング大会！<br />
-                    班に分かれてチーム戦をしたり、個人で競ったりするよ！🎳<br />
-                    上手い下手関係なく、とにかく盛り上がる！そして...点数が上位の人には豪華景品が...!?<br />
-                    5限後からでも大歓迎！リベンジ戦もお待ちしています！</p>
+                <p><strong>参加費:500円</strong><br />
+                    第2回ボウリング大会！🎳<br />
+                    豪華景品のリベンジチャンス！5限後からの参加も大歓迎です！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -254,10 +268,9 @@
             <img src="joshikai.png">
             <div class="info">
                 <h3>女子会</h3>
-                <p>参加費:500円<br />
-                    女子限定の企画！<br />
-                    スイパラで甘いものたくさん食べまくるよ！🐙<br />
-                    明るくておもしろい先輩たちと女子トークで盛り上がろう💝</p>
+                <p><strong>参加費:500円</strong><br />
+                    女子限定企画！今回はスイパラで甘いものパーティー！🍰<br />
+                    女子同士、気軽に参加して仲良くなっちゃおう💝</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -267,11 +280,8 @@
             <img src="saren.png">
             <div class="info">
                 <h3>サレン(17:00~19:00)🎾</h3>
-                <p>今月最後のサレン！三ッ沢公園のテニスコートでテニスをするよ！<br />
-                    テニスやったことない人も上手な人も絶対楽しめるのでぜひきてね！<br />
-                    ポテトを知るラストチャンス！<br />
-                    途中参加でもお待ちしてます❢
-                </p>
+                <p>今月最後のサレン！ポテトを知るラストチャンス！<br />
+                    テニスをしたことがなくても全然大丈夫。最後みんなで楽しみましょう❢</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
@@ -281,13 +291,11 @@
             <img src="picnic.png">
             <div class="info">
                 <h3>ピクニック</h3>
-                <p>芝生の上でのんびり食べておしゃべり！<br />
-                    サッカーをしたり、フリスビーをしたり、体を動かして楽しむこともできるよ！<br />
-                    4月の締めくくりイベント！最後の新歓たくさんの参加おまちしております❣</p>
+                <p>芝生の上でのんびりおしゃべり！<br />
+                    サッカーやフリスビーなど外遊びも満喫！4月の締めくくりイベントです❣</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
-
     </div>
 
 </body>
