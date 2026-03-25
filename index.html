@@ -14,10 +14,10 @@
             background-position: center;
             margin: 0;
             padding: 40px 10px;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
         }
 
-        /* PotatoChips2026をセンターに配置 */
+        /* 1. PotatoChips2026（最上部タイトル） */
         .top-brand-title {
             font-size: 2.5rem;
             font-weight: bold;
@@ -28,57 +28,61 @@
             width: 100%;
         }
 
-        /* SNSアイコンエリア */
-        .sns-links {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .sns-links a {
-            text-decoration: none;
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .sns-links img {
-            width: 45px; /* アイコンのサイズ */
-            height: 45px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        /* マウスを乗せた時の動き */
-        .sns-links img:hover {
-            transform: scale(1.1);
-        }
-
-        /* ヘッダー部分の設定（中央寄せ） */
+        /* ヘッダーセクションの基本設定 */
         .header-section {
             text-align: center;
             color: white;
             max-width: 800px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto; /* 下の余白はSNSリンク側で調整 */
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
+            border-bottom: 3px solid #333; /* 写真のようにタイトルの下に線を入れる場合 */
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
+        /* 2. 説明文部分 */
         .header-section p {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 25px;
+            /* 写真のように背景を透過させる場合（不要なら削除してください） */
+            /* background: rgba(0, 0, 0, 0.2); */
+            padding: 20px;
             border-radius: 15px;
             line-height: 1.8;
             font-size: 16px;
-            display: inline-block;
             text-align: center;
-            margin: 0;
+            margin: 0 auto 20px auto;
+            font-weight: bold;
         }
 
-        /* 1行に3列並べる設定 */
+        /* 3. SNSアイコンエリア（説明文のすぐ下に配置） */
+        .sns-links {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sns-links a {
+            text-decoration: none;
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        .sns-links img {
+            width: 45px; 
+            height: 45px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .sns-links img:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- 以下、カードレイアウトのスタイル --- */
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -87,7 +91,6 @@
             margin: 0 auto;
         }
 
-        /* カード（枠）のデザイン */
         .card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -105,51 +108,64 @@
 
         .date-text {
             background-color: #f8f8f8;
-            padding: 12px;
-            font-size: 18px;
+            padding: 10px;
+            font-size: 16px;
             color: #444;
-            font-weight: 800;
+            font-weight: bold;
             border-bottom: 1px solid #eee;
         }
 
         .card img {
             width: 100%;
-            height: 160px;
+            height: 180px;
             object-fit: cover;
         }
 
         .info {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .info h3 {
             margin: 0 0 10px 0;
-            font-size: 18px;
+            font-size: 20px;
             color: #333;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            align-self: center;
         }
 
         .info p {
             font-size: 14px;
-            color: #333;
-            line-height: 1.7;
+            color: #444;
+            line-height: 1.6;
             margin-bottom: 20px;
-            min-height: 60px;
             text-align: left;
+            flex-grow: 1;
         }
 
         .btn-entry {
             display: inline-block;
+            background: #ff4b2b; /* 単色、またはグラデーション */
             background: linear-gradient(to right, #ff4b2b, #ff416c);
             color: white;
-            padding: 10px 30px;
-            border-radius: 25px;
+            padding: 8px 20px;
+            border-radius: 20px;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(255, 75, 43, 0.3);
+            transition: opacity 0.3s;
+            width: fit-content;
+            margin: 0 auto;
         }
 
-        /* スマホ・タブレット対応 */
+        .btn-entry:hover {
+            opacity: 0.8;
+        }
+
+        /* レスポンシブ対応 */
         @media (max-width: 900px) {
             .container { grid-template-columns: repeat(2, 1fr); }
         }
@@ -157,8 +173,6 @@
             .container { grid-template-columns: 1fr; }
             h1 { font-size: 28px; }
             .top-brand-title { font-size: 2rem; }
-            .header-section p { font-size: 14px; padding: 15px; }
-            .sns-links img { width: 40px; height: 40px; }
         }
     </style>
 </head>
@@ -166,189 +180,51 @@
 
     <div class="top-brand-title">PotatoChips2026</div>
 
-  
-
     <div class="header-section">
         <h1>新歓予約フォーム一覧</h1>
+        
         <p>
-            参加したい企画に申し込みをしてね！<br />
-            まだ公式ラインを追加していない人は申し込み前に追加してください！<br />
-            応募締め切りは各企画の前日までです。<br />
-            当日の飛び入り参加も大歓迎！その場合は、公式ラインまたは代持ちの誰かに聞いてみてください！<br />
-            <strong>＊新歓への参加は一年生のみです</strong>
+            参加したい企画に申し込みをしてね！<br>
+            まだ公式ラインを追加していない人は申し込み前に追加してください！<br>
+            応募締め切りは各企画の前日までです。<br>
+            飛び込みで参加したい人は公式ラインまたは代持ちの誰かに聞いてみてください。
         </p>
     </div>
+
     <div class="sns-links">
+        <a href="https://x.com/potatochips49th?s=11" target="_blank">
+            <img src="x.png" alt="X">
+        </a>
         <a href="https://www.instagram.com/potatochips_49th?igsh=eWlma2FvaGxmdng4" target="_blank">
             <img src="instagram.png" alt="Instagram">
         </a>
         <a href="https://lin.ee/op4LQtgR" target="_blank">
             <img src="line.png" alt="LINE">
         </a>
-        <a href="https://x.com/potatochips49th?s=11" target="_blank">
-            <img src="x.png" alt="X">
-        </a>
     </div>
 
     <div class="container">
         <div class="card">
-            <div class="date-text">4/8 (Wed)</div>
-            <img src="bowling.png">
+            <div class="date-text">4/3 履修相談会 13:00~15:00</div>
+            <img src="risyu.png" alt="履修相談会">
+            <div class="info">
+                <h3>履修相談会</h3>
+                <p>履修って意外とややこしい⁉ 先輩からアドバイスをもらいながら一緒に履修を組もう📝</p>
+                <a href="#" class="btn-entry">申し込み</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="date-text">4/7 ボウリング</div>
+            <img src="bowling.png" alt="ボウリング">
             <div class="info">
                 <h3>ボウリング</h3>
-                <p>参加費:500円<br />
-                    新歓イベント第1弾！班に分かれてチーム戦をしたり、個人で競ったりするよ！🎳<br />
-                    上手い下手関係なく、とにかく盛り上がる！そして点数が上位の人には豪華景品が...!?
-                </p>
+                <p>参加費:500円<br>班に分かれてチーム戦をするよ！🎳 上手い下手は二の次で、とにかく盛り上がる！</p>
                 <a href="#" class="btn-entry">申し込み</a>
             </div>
         </div>
 
-        <div class="card">
-            <div class="date-text">4/11 (Sat)</div>
-            <img src="kamakura.png">
-            <div class="info">
-                <h3>鎌倉観光</h3>
-                <p>参加費:500円<br />
-                    鎌倉の観光スポットを巡りながらたくさん食べ歩きしよう！<br />
-                    班ごとにまわるので先輩、同級生と仲良くなれること間違いなし！❕</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
         </div>
-
-        <div class="card">
-            <div class="date-text">4/12 (Sun)</div>
-            <img src="asakusa.png">
-            <div class="info">
-                <h3>浅草散策</h3>
-                <p>参加費:500円<br />
-                    班に分かれて浅草を観光するよ⛩<br />
-                    グルメ、観光スポットを満喫しよう！歴史ある街並みをみんなで歩きましょう。</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/13 (Mon)</div>
-            <img src="saren.png">
-            <div class="info">
-                <h3>サレン(17:00~19:00)🎾</h3>
-                <p>三ッ沢公園のテニスコートで2時間テニスをするよ！<br />
-                    初心者も経験者も絶対楽しめます！<br />
-                    ポテトの雰囲気を知るならまずはここから！途中参加も大歓迎！
-                </p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/15 (Wed)</div>
-            <img src="saren.png">
-            <div class="info">
-                <h3>サレン & 上級練習会🎾</h3>
-                <p>17:00〜19:00は全員で、19:00〜21:00は上級練習会を実施！<br />
-                    テニスをガッツリやりたい人も、楽しく打ちたい人もぜひきてね！<br />
-                    ラケットの貸出もあります。</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/16 (Thu)</div>
-            <img src="minatomirai.png">
-            <div class="info">
-                <h3>みなとみらい</h3>
-                <p>参加費:500円<br />
-                    横浜といえばみなとみらい🌃✨<br />
-                    きれいな夜景を楽しめて映えるスポットもたくさんあるよ！！<br />
-                    中華街においしいものたくさん食べに行こう！</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/17 (Fri)</div>
-            <img src="joshikai.png">
-            <div class="info">
-                <h3>女子会</h3>
-                <p>参加費:500円<br />
-                    女子限定の企画！ビュッフェで食べまくるよ！🐙<br />
-                    明るくておもしろい先輩たちと女子トークで盛り上がろう💝</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/19 (Sun)</div>
-            <img src="BBQ.png">
-            <div class="info">
-                <h3>BBQ</h3>
-                <p>参加費:500円<br />
-                    ポテトの新歓一番のビッグイベント！🍖<br />
-                    班ごとにドライブしながら河原へ向かいます！一番楽しい企画間違いなし！</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/21 (Tue)</div>
-            <img src="saren.png">
-            <div class="info">
-                <h3>サレン & 上級練習会🎾</h3>
-                <p>三ッ沢公園のテニスコートでテニス！<br />
-                    19:00からは上級練習会も！<br />
-                    たくさん動いて新生活のストレスをリフレッシュしよう！</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/22 (Wed)</div>
-            <img src="bowling.png">
-            <div class="info">
-                <h3>ボウリング</h3>
-                <p>参加費:500円<br />
-                    第2回ボウリング大会！🎳<br />
-                    豪華景品のリベンジチャンス！5限後からの参加も大歓迎です！</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/23 (Thu)</div>
-            <img src="joshikai.png">
-            <div class="info">
-                <h3>女子会</h3>
-                <p>参加費:500円<br />
-                    女子限定企画！今回はスイパラで甘いものパーティー！🍰<br />
-                    女子同士、気軽に参加して仲良くなっちゃおう💝</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/24 (Fri)</div>
-            <img src="saren.png">
-            <div class="info">
-                <h3>サレン(17:00~19:00)🎾</h3>
-                <p>今月最後のサレン！ポテトを知るラストチャンス！<br />
-                    テニスをしたことがなくても全然大丈夫。最後みんなで楽しみましょう❢</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="date-text">4/25 (Sat)</div>
-            <img src="picnic.png">
-            <div class="info">
-                <h3>ピクニック</h3>
-                <p>参加費:500円<br />
-                    芝生の上でのんびりおしゃべり！<br />
-                    サッカーやフリスビーなど外遊びも満喫！4月の締めくくりイベントです❣</p>
-                <a href="#" class="btn-entry">申し込み</a>
-            </div>
-        </div>
-    </div>
 
 </body>
 </html>
