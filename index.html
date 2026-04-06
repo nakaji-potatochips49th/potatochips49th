@@ -92,7 +92,13 @@
             transition: transform 0.3s;
         }
 
-        .card:hover {
+        /* 終了したカードのスタイル */
+        .card.ended {
+            opacity: 0.6; /* 全体を薄くする */
+            filter: grayscale(0.3); /* 少しだけ色味を抑える */
+        }
+
+        .card:not(.ended):hover {
             transform: translateY(-5px);
         }
 
@@ -147,6 +153,15 @@
             margin-top: auto;
         }
 
+        /* 終了ボタンのスタイル */
+        .btn-ended {
+            background: #ccc !important;
+            color: #666 !important;
+            box-shadow: none !important;
+            cursor: not-allowed; /* 禁止マークのカーソル */
+            pointer-events: none; /* クリックを無効化 */
+        }
+
         @media (max-width: 900px) {
             .container { grid-template-columns: repeat(2, 1fr); }
         }
@@ -187,17 +202,17 @@
     </div>
 
     <div class="container">
-        <div class="card">
+        <div class="card ended">
             <div class="date-text">4/8 (Wed)</div>
             <img src="bowling.png">
             <div class="info">
                 <h3>ボウリング</h3>
                 <p>参加費:500円<br />新歓イベント第1弾！班に分かれてチーム戦をしたり、個人で競ったりするよ！🎳上手い下手関係なく、とにかく盛り上がる！そして...点数が上位の人には豪華景品が...!?5限後からでも大歓迎！</p>
-                <a href="https://forms.gle/ZB4SEYiEgGeJBAPY8" target="_blank" class="btn-entry">申し込み</a>
+                <a href="#" class="btn-entry btn-ended">受付終了</a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card ended">
             <div class="date-text">4/9 (Thu)</div>
             <img src="saren.png">
             <div class="info">
@@ -206,7 +221,7 @@
                     初心者の方も、経験者の方も大歓迎です！<br />
                     先輩たちが優しく教えるので、まずは気軽に参加してみてください✨<br />
                     ラケットの貸し出しもあります！途中参加もOKです！</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEC8ZQyqMONpuOINfp0Fov0AELeXBTUsbwO6uNYQfC0VT7ug/viewform?usp=header" target="_blank" class="btn-entry">申し込み</a>
+                <a href="#" class="btn-entry btn-ended">受付終了</a>
             </div>
         </div>
 
@@ -272,7 +287,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card ended">
             <div class="date-text">4/17 (Fri)</div>
             <img src="joshikai.png">
             <div class="info">
@@ -280,9 +295,9 @@
                 <p>参加費:500円<br />女子限定の企画！<br />
                     ビュッフェで食べまくるよ！🐙<br />
                     明るくておもしろい先輩たちと女子トークで盛り上がろう💝<br />
-                <strong>＊女子会は4/17(金)または4/23(木)のどちらか一日のみの参加となります💦</strong>
+                <strong>＊女子会は4/17(金)または4/23(木)のいずれか1日程のみ参加可能です💦</strong>
                 </p>
-                <a href="https://forms.gle/rA8u4kSonk65xeCX9" target="_blank" class="btn-entry">申し込み</a>
+                <a href="#" class="btn-entry btn-ended">受付終了</a>
             </div>
         </div>
 
@@ -325,7 +340,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card ended">
             <div class="date-text">4/23 (Thu)</div>
             <img src="joshikai.png">
             <div class="info">
@@ -333,8 +348,8 @@
                 <p>参加費:500円<br />女子限定の企画！<br />
                     スイパラで甘いものたくさん食べまくるよ！🐙<br />
                     明るくておもしろい先輩たちと女子トークで盛り上がろう💝<br />
-                 <strong>＊女子会は4/17(金)または4/23(木)のどちらか一日のみの参加となります💦</strong></p>
-                <a href="https://forms.gle/wMzjLmRKuSCCZXjB8" target="_blank" class="btn-entry">申し込み</a>
+                 <strong>＊女子会は4/17(金)または4/23(木)のいずれか1日程のみ参加可能です💦</strong></p>
+                <a href="#" class="btn-entry btn-ended">受付終了</a>
             </div>
         </div>
 
